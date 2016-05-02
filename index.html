@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Modded-2048 by ZeldaGamer9000</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Modded-2048</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/ZeldaGamer9000/modded-2048" class="btn">View on GitHub</a>
+      <a href="https://github.com/ZeldaGamer9000/modded-2048/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ZeldaGamer9000/modded-2048/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>&lt;!DOCTYPE html&gt;
+
+</p>
+  
+  2048
+
+<p>
+  
+  
+   &lt;!-- iPhone 5+ --&gt;
+   &lt;!-- iPhone, retina --&gt;
+  
+  </p>
+
+<p>
+  
+  
+  </p>
+
+<p></p>
+
+<p>
+  
+  
+  </p>
+
+<p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+</p>
+  <div>
+    <div>
+      <h1>
+<a id="2048" class="anchor" href="#2048" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2048</h1>
+      <div>
+        <div>0</div>
+        <div>0</div>
+      </div>
+    </div>
+
+<pre><code>&lt;div class="above-game"&gt;
+  &lt;p class="game-intro"&gt;Join the numbers and get to the &lt;strong&gt;2048 tile!&lt;/strong&gt;&lt;/p&gt;
+  &lt;a class="restart-button"&gt;New Game&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="app-notice"&gt;
+  &lt;span class="notice-close-button"&gt;x&lt;/span&gt;
+  &lt;p&gt;&lt;strong class="important"&gt;New:&lt;/strong&gt; Get the new 2048 app for &lt;a href="https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805" target="_blank"&gt;iOS&lt;/a&gt; and &lt;a href="https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048" target="_blank"&gt;Android!&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="game-container"&gt;
+  &lt;div class="game-message"&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;div class="lower"&gt;
+        &lt;a class="keep-playing-button"&gt;Keep going&lt;/a&gt;
+      &lt;a class="retry-button"&gt;Try again&lt;/a&gt;
+      &lt;div class="score-sharing"&gt;&lt;/div&gt;
+      &lt;div class="mailing-list"&gt;
+        &lt;!-- MailChimp Signup Form --&gt;
+        &lt;form action="http://gabrielecirulli.us8.list-manage.com/subscribe/post?u=991201206817cfb4e4247ed6c&amp;amp;id=7928ea817b" method="post" name="mc-embedded-subscribe-form" class="mailing-list-form" target="_blank"&gt;
+          &lt;strong&gt;Get email updates from Gabriele&lt;/strong&gt;
+
+          &lt;input type="email" value="" name="EMAIL" class="mailing-list-email-field" placeholder="Your email address" spellcheck="false"&gt;
+
+          &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
+          &lt;div style="position: absolute; left: -9999px;"&gt;
+            &lt;input type="text" name="b_991201206817cfb4e4247ed6c_7928ea817b" value=""&gt;
+          &lt;/div&gt;
+
+          &lt;input type="submit" value="Go" name="subscribe" class="mailing-list-subscribe-button"&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="grid-container"&gt;
+    &lt;div class="grid-row"&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="grid-row"&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="grid-row"&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="grid-row"&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+      &lt;div class="grid-cell"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="tile-container"&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p class="game-explanation"&gt;
+  &lt;strong class="important"&gt;How to play:&lt;/strong&gt; Use your &lt;strong&gt;arrow keys&lt;/strong&gt; to move the tiles. When two tiles with the same number touch, they &lt;strong&gt;merge into one!&lt;/strong&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+&lt;strong class="important"&gt;Note:&lt;/strong&gt; The game on &lt;a href="http://git.io/2048"&gt;this site&lt;/a&gt; is the original version of 2048. Apps for &lt;a href="https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805" target="_blank"&gt;iOS&lt;/a&gt; and &lt;a href="https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048" target="_blank"&gt;Android&lt;/a&gt; are also available. Other versions are derivatives or fakes, and should be used with caution.
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+Created by &lt;a href="http://gabrielecirulli.com" target="_blank"&gt;Gabriele Cirulli.&lt;/a&gt; Based on &lt;a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank"&gt;1024 by Veewo Studio&lt;/a&gt; and conceptually similar to &lt;a href="http://asherv.com/threes/" target="_blank"&gt;Threes by Asher Vollmer.&lt;/a&gt;
+&lt;/p&gt;
+&lt;div class="sharing"&gt;
+  &lt;a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out 2048, a game where you join numbers to score high! #2048game" data-via="gabrielecirulli" data-url="http://git.io/2048" data-counturl="http://gabrielecirulli.github.io/2048/"&gt;Tweet&lt;/a&gt;
+  &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');&lt;/script&gt;
+
+  &lt;form class="pp-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"&gt;
+    &lt;input type="hidden" name="cmd" value="_s-xclick"&gt;
+    &lt;input type="hidden" name="hosted_button_id" value="NVNPJLTBZ8AME"&gt;
+    &lt;button name="submit"&gt;&lt;img src="meta/icon_pp.svg"&gt;Donate&lt;/button&gt;
+    &lt;img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"&gt;
+  &lt;/form&gt;
+
+  &lt;span class="btc-donate"&gt;
+    &lt;a href="bitcoin:1Ec6onfsQmoP9kkL3zkpB6c5sA4PVcXU2i"&gt;
+      &lt;img src="meta/icon_bitcoin.svg"&gt;Donate BTC
+    &lt;/a&gt;
+    &lt;span class="address"&gt;&lt;code&gt;1Ec6onfsQmoP9kkL3zkpB6c5sA4PVcXU2i&lt;/code&gt;&lt;/span&gt;
+  &lt;/span&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<p></p>
+</div>
+
+<p>
+  
+  
+  
+  
+  
+  
+  
+  
+  </p>
+
+<p>
+
+</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ZeldaGamer9000/modded-2048">Modded-2048</a> is maintained by <a href="https://github.com/ZeldaGamer9000">ZeldaGamer9000</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
